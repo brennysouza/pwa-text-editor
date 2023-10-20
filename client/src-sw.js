@@ -4,8 +4,6 @@ const { registerRoute } = require('workbox-routing');
 const { CacheableResponsePlugin } = require('workbox-cacheable-response');
 const { ExpirationPlugin } = require('workbox-expiration');
 const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
-// This variable is found in the strategy below called CacheFirst.
-const { CacheFirst } = require('workbox-strategies');
 
 precacheAndRoute(self.__WB_MANIFEST);
 
