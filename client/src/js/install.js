@@ -6,6 +6,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
     // Prevents the default browser prompt to install the PWA
     event.preventDefault(); 
     deferredPrompt = event;
+    butInstall.classList.toggle('hidden', false);
 });
 
 // TODO: Implement a click event handler on the `butInstall` element
@@ -19,7 +20,9 @@ butInstall.addEventListener('click', async () => {
           console.log('User accepted the PWA installation');
         }
         // Reset the deferred prompt variable to null as it can only be used once.
+        
         deferredPrompt = null; 
+        butInstall.classList.toggle('hidden', true);
       }
     
 });
