@@ -32,6 +32,7 @@ module.exports = () => {
         swSrc: "./src-sw.js",
         swDest: "src-sw.js",
       }),
+      // Generates a service worker file
       // Generates a manifest file
       new WebpackPwaManifest({
         fingerprints: false,
