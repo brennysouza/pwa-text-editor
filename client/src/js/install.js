@@ -4,8 +4,9 @@ const butInstall = document.getElementById('buttonInstall');
 // TODO: Add an event handler to the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', (event) => {
     // Prevents the default browser prompt to install the PWA
-    event.preventDefault(); 
-    deferredPrompt = event;
+    window.deferredPrompt = event;
+    // event.preventDefault(); 
+    // deferredPrompt = event;
     butInstall.classList.toggle('hidden', false);
 });
 
